@@ -6,7 +6,7 @@ Project supported by the Georgia State University Foundation Trustees.
 
 ![](https://www.gsu.edu/wp-content/themes/gsu-flex-2/images/logo.png)
 
-Andrew Wheeler, Scott Jacques, Ellen Ballard
+Andrew Wheeler, Scott Jacques
 
 # Overview of the Project
 
