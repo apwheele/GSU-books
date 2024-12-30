@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Copy Book",
+  "description": "Copy Book Info from GSU Bookstore",
+  "version": "1.0",
+  "action": {
+    "default_icon": "icon.png"
+  },
+"permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "js": ["background.js"],
+      "matches": ["https://www.bkstr.com/*"],
+      "run_at": "document_start"
+    }]
+}
