@@ -9,8 +9,8 @@ import json
 from collections import defaultdict
 
 
-enroll = pd.read_csv('GSU_CourseInfo_Fall2024.csv')
-books = pd.read_csv('BookPrice.csv')
+enroll = pd.read_csv('GSU_CourseInfo_Spring2025.csv')
+books = pd.read_csv('BookPrice_Spring2025.csv')
 
 campus = {'Atlanta':'403',
           'Alpharetta':'3461',
@@ -109,7 +109,7 @@ reprr = {'Required Choose Only 1 of 2': 'Required',
 books['REQUIRED'] = books['REQUIRED'].replace(reprr).fillna('')
 
 books.sort_values(by='MinVal',ascending=False,inplace=True,ignore_index=True)
-books[book_sel].to_csv('BookInfo_Fall2024.csv',index=False)
+books[book_sel].to_csv('BookInfo_Spring2025.csv',index=False)
 
 
 
@@ -117,11 +117,6 @@ books[book_sel].to_csv('BookInfo_Fall2024.csv',index=False)
 # Reshape multiple books onto same line
 # When Required Choose Only 1 of 2, get min/max
 mf = list(mfields.values()) + ['maximumEnrollment','enrollment','REQUIRED']
-
-def agg_book(x):
-    if x['required'] == 'Required':
-        minx = 
-    elif
 
 lr = []
 g = books.groupby(mf,as_index=False)['MinPrice'].min()

@@ -117,4 +117,6 @@ for l in levels:
         time.sleep(10)
 
 res_df = pd.concat(res_li,ignore_index=True)
-res_df.to_csv('GSU_CourseInfo_Fall2024.csv',index=False)
+res_df.to_csv('GSU_CourseInfo_Spring2025.csv',index=False)
+
+# Finished

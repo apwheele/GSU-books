@@ -31,11 +31,12 @@ middle_page = (-1133, 518) #(-977, 544)
 close_chrome = (-16,17)
 
 # Current sheet to get
-cl = 'GSU_CourseInfo_Fall2024.csv'
+cl = 'GSU_CourseInfo_Spring2025.csv'
 
 # Go look up a course and in the URL bar to get this info
 # term ID
-tid = '100083441'
+#tid = '100083441' # Fall 2024
+tid = '100086309'
 
 # program ID for the different campuses
 campus = {'Atlanta':'403',
@@ -141,7 +142,7 @@ urls = make_url()
 
 if os.path.exists('FailURLs.csv'):
     fail_url = pd.read_csv('FailURLs.csv')
-    fail_url = fail_url[0].tolist()
+    fail_url = fail_url.iloc[:,0].tolist()
 else:
     fail_url = []
 
